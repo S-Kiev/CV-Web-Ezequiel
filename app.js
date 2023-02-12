@@ -77,3 +77,15 @@ function efectoHabilidades(){
         },100);
     }
 }
+
+//lleno una barra particular con la cantidad indicada
+function pintarBarra(id_barra, cantidad, indice, interval){
+    contadores[indice]++;
+    x = contadores[indice];
+    if(x < cantidad){
+        let elementos = id_barra.getElementsByClassName("e");
+        elementos[x].style.backgroundColor = "#940253";
+    }else{
+        clearInterval(interval)
+    }
+}
