@@ -43,3 +43,37 @@ let php = document.getElementById("php");
 crearBarra(php);
 let ilustrator = document.getElementById("ilustrator");
 crearBarra(ilustrator);
+
+//Ahora voy a guardar la cantidad de barritas que se van a ir pintando por cada barar
+//para eso utilizo un arreglo, cada posiciòn pertenece a un elemento
+//comienzan en -1 porque no tiene ninguna pintada al iniciarse
+let contadores = [-1,-1,-1,-1,-1,-1];
+//esta variable la voy a utilizar de bandera para saber si ya ejecuto la animación
+let entro = false;
+
+//función que aplica las animaciones de la habilidades
+function efectoHabilidades(){
+    var habilidades = document.getElementById("habilidades");
+    var distancia_skills = window.innerHeight - habilidades.getBoundingClientRect().top;
+    if(distancia_skills>=300 && entro==false){
+        entro = true;
+        const intervalHtml = setInterval(function(){
+            pintarBarra(html, 16, 0, intervalHtml);
+        },100);
+        const intervalJavascript = setInterval(function(){
+            pintarBarra(javascript, 11, 1, intervalJavascript);
+        },100);
+        const intervalWordpress = setInterval(function(){
+            pintarBarra(wordpress, 11, 2, intervalWordpress);
+        },100);
+        const intervalPhotoshop = setInterval(function(){
+            pintarBarra(photoshop, 15, 3, intervalPhotoshop);
+        },100);
+        const intervalPhp = setInterval(function(){
+            pintarBarra(php, 16, 4, intervalPhp);
+        },100);
+        const intervalIlustrator = setInterval(function(){
+            pintarBarra(ilustrator, 11, 5, intervalIlustrator);
+        },100);
+    }
+}
