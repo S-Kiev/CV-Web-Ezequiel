@@ -29,3 +29,17 @@ function crearBarra(id_barra){
         id_barra.appendChild(div);
     }
 }
+
+//selecciono todas las barras generales para luego manipularlas
+let html = document.getElementById("html");
+crearBarra(html);
+let javascript = document.getElementById("javascript");
+crearBarra(javascript);
+let wordpress = document.getElementById("wordpress");
+crearBarra(wordpress);
+let photoshop = document.getElementById("photoshop");
+crearBarra(photoshop);
+let php = document.getElementById("php");
+crearBarra(php);
+let ilustrator = document.getElementById("ilustrator");
+crearBarra(ilustrator);
